@@ -1,5 +1,7 @@
 package com.rabo.yepp.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.time.LocalDateTime;
 
 public class Transaction implements Table{
@@ -14,8 +16,7 @@ public class Transaction implements Table{
     public Transaction(){
     }
 
-    public Transaction(long id, String accountFrom, String accountTo, double amount) {
-        this.id = id;
+    public Transaction(String accountFrom, String accountTo, double amount) {
         this.accountFrom = accountFrom;
         this.accountTo = accountTo;
         this.amount = amount;

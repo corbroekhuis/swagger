@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface Repository <T extends Table>{
+
     T save(T t);
 
     T update(T t);
